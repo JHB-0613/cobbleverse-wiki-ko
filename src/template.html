@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}} · COBBLEVERSE 한국어 위키</title>
+<meta name="description" content="{{description}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('cv-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body class="{{bodyclass}}">
+<header class="topbar">
+  <button class="menu-btn" aria-label="메뉴 열기" onclick="document.body.classList.toggle('nav-open')">☰</button>
+  <a class="brand" href="index.html"><span class="ball" aria-hidden="true"></span><span>COBBLEVERSE <b>위키</b></span></a>
+  <div class="search">
+    <input id="search" type="search" placeholder="위키 검색 (예: 루기아, 체육관, 서버)" autocomplete="off">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <button class="theme-btn" id="theme-btn" aria-label="테마 전환" title="라이트/다크 전환">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="nav-home" href="index.html">🏠 대문</a>
+    {{sidebar}}
+  </aside>
+  <main class="content">
+    <article>
+      {{crumb}}
+      <h1 class="page-title">{{title}}</h1>
+      {{content}}
+      {{source}}
+    </article>
+    <footer class="footer">
+      이 위키는 <a href="https://www.lumyverse.com/cobbleverse/" target="_blank" rel="noopener">LUMYVERSE COBBLEVERSE Wiki</a>의 내용을 한국어로 옮긴 비공식 팬 번역본입니다.
+      이미지 및 원문 저작권은 LUMYVERSE와 각 제작자에게 있습니다. Pokémon은 Nintendo, Creatures Inc., GAME FREAK Inc.의 상표입니다.
+    </footer>
+  </main>
+  {{toc}}
+</div>
+<div class="scrim" onclick="document.body.classList.remove('nav-open')"></div>
+{{extra}}
+<script src="search-index.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

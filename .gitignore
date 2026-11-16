@@ -1,0 +1,5 @@
+# 빌드 결과물은 GitHub Actions에서 생성
+site/
+__pycache__/
+*.pyc
+.claude/settings.local.json
